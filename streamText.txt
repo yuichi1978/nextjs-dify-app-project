@@ -1,0 +1,70 @@
+data: {"event": "workflow_started", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "workflow_id": "0a1fac4a-2cf7-4fd7-aa15-dbc31e045611", "sequence_number": 7, "inputs": {"query": "\u30c6\u30b9\u30c8\u3067\u3059", "sys.files": [], "sys.user_id": "abc-123", "sys.app_id": "5014aa2f-f2c4-4358-8724-ce066a795b54", "sys.workflow_id": "0a1fac4a-2cf7-4fd7-aa15-dbc31e045611", "sys.workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d"}, "created_at": 1745715382}}
+
+data: {"event": "node_started", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"id": "74d9afe2-385e-4e3b-bc87-3b1691e1605e", "node_id": "1745626259248", "node_type": "start", "title": "\u958b\u59cb", "index": 1, "predecessor_node_id": null, "inputs": null, "created_at": 1745715382, "extras": {}, "parallel_id": null, "parallel_start_node_id": null, "parent_parallel_id": null, "parent_parallel_start_node_id": null, "iteration_id": null, "loop_id": null, "parallel_run_id": null, "agent_strategy": null}}
+
+data: {"event": "node_finished", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"id": "74d9afe2-385e-4e3b-bc87-3b1691e1605e", "node_id": "1745626259248", "node_type": "start", "title": "\u958b\u59cb", "index": 1, "predecessor_node_id": null, "inputs": {"query": "\u30c6\u30b9\u30c8\u3067\u3059", "sys.files": [], "sys.user_id": "abc-123", "sys.app_id": "5014aa2f-f2c4-4358-8724-ce066a795b54", "sys.workflow_id": "0a1fac4a-2cf7-4fd7-aa15-dbc31e045611", "sys.workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d"}, "process_data": null, "outputs": {"query": "\u30c6\u30b9\u30c8\u3067\u3059", "sys.files": [], "sys.user_id": "abc-123", "sys.app_id": "5014aa2f-f2c4-4358-8724-ce066a795b54", "sys.workflow_id": "0a1fac4a-2cf7-4fd7-aa15-dbc31e045611", "sys.workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d"}, "status": "succeeded", "error": null, "elapsed_time": 0.020189, "execution_metadata": null, "created_at": 1745715382, "finished_at": 1745715382, "files": [], "parallel_id": null, "parallel_start_node_id": null, "parent_parallel_id": null, "parent_parallel_start_node_id": null, "iteration_id": null, "loop_id": null}}
+
+data: {"event": "node_started", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"id": "6ead469b-42ff-46fc-a303-428d3480b2b4", "node_id": "1745626330718", "node_type": "llm", "title": "LLM", "index": 2, "predecessor_node_id": "1745626259248", "inputs": null, "created_at": 1745715382, "extras": {}, "parallel_id": null, "parallel_start_node_id": null, "parent_parallel_id": null, "parent_parallel_start_node_id": null, "iteration_id": null, "loop_id": null, "parallel_run_id": null, "agent_strategy": null}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u30c6", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u30b9\u30c8", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u306e", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u7d50\u679c", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u306f\u3044", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u304b", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u304c", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u3067\u3057\u3087\u3046", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u304b", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\uff1f", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u4f55", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u304b", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u304a", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u624b", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u4f1d", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u3044", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u3067\u304d", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u308b", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u3053\u3068", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u304c", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u3042", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u308c\u3070", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u6559", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u3048\u3066", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u304f\u3060\u3055\u3044", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "\u3002", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "text_chunk", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"text": "", "from_variable_selector": ["1745626330718", "text"]}}
+
+data: {"event": "node_finished", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"id": "6ead469b-42ff-46fc-a303-428d3480b2b4", "node_id": "1745626330718", "node_type": "llm", "title": "LLM", "index": 2, "predecessor_node_id": "1745626259248", "inputs": null, "process_data": {"model_mode": "chat", "prompts": [{"role": "user", "text": "\u30c6\u30b9\u30c8\u3067\u3059", "files": []}], "model_provider": "langgenius/openai/openai", "model_name": "gpt-4o-mini"}, "outputs": {"text": "\u30c6\u30b9\u30c8\u306e\u7d50\u679c\u306f\u3044\u304b\u304c\u3067\u3057\u3087\u3046\u304b\uff1f\u4f55\u304b\u304a\u624b\u4f1d\u3044\u3067\u304d\u308b\u3053\u3068\u304c\u3042\u308c\u3070\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002", "usage": {"prompt_tokens": 10, "prompt_unit_price": "0.15", "prompt_price_unit": "0.000001", "prompt_price": "0.0000015", "completion_tokens": 27, "completion_unit_price": "0.6", "completion_price_unit": "0.000001", "completion_price": "0.0000162", "total_tokens": 37, "total_price": "0.0000177", "currency": "USD", "latency": 1.0726453950001087}, "finish_reason": "stop"}, "status": "succeeded", "error": null, "elapsed_time": 1.1317, "execution_metadata": {"total_tokens": 37, "total_price": "0.0000177", "currency": "USD"}, "created_at": 1745715382, "finished_at": 1745715383, "files": [], "parallel_id": null, "parallel_start_node_id": null, "parent_parallel_id": null, "parent_parallel_start_node_id": null, "iteration_id": null, "loop_id": null}}
+
+data: {"event": "node_started", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"id": "5b69b959-1244-4c96-982e-f4762f4a7854", "node_id": "1745630303147", "node_type": "end", "title": "\u7d42\u4e86", "index": 3, "predecessor_node_id": "1745626330718", "inputs": null, "created_at": 1745715383, "extras": {}, "parallel_id": null, "parallel_start_node_id": null, "parent_parallel_id": null, "parent_parallel_start_node_id": null, "iteration_id": null, "loop_id": null, "parallel_run_id": null, "agent_strategy": null}}
+
+data: {"event": "node_finished", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"id": "5b69b959-1244-4c96-982e-f4762f4a7854", "node_id": "1745630303147", "node_type": "end", "title": "\u7d42\u4e86", "index": 3, "predecessor_node_id": "1745626330718", "inputs": {"result": "\u30c6\u30b9\u30c8\u306e\u7d50\u679c\u306f\u3044\u304b\u304c\u3067\u3057\u3087\u3046\u304b\uff1f\u4f55\u304b\u304a\u624b\u4f1d\u3044\u3067\u304d\u308b\u3053\u3068\u304c\u3042\u308c\u3070\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002"}, "process_data": null, "outputs": {"result": "\u30c6\u30b9\u30c8\u306e\u7d50\u679c\u306f\u3044\u304b\u304c\u3067\u3057\u3087\u3046\u304b\uff1f\u4f55\u304b\u304a\u624b\u4f1d\u3044\u3067\u304d\u308b\u3053\u3068\u304c\u3042\u308c\u3070\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002"}, "status": "succeeded", "error": null, "elapsed_time": 0.082586, "execution_metadata": null, "created_at": 1745715383, "finished_at": 1745715383, "files": [], "parallel_id": null, "parallel_start_node_id": null, "parent_parallel_id": null, "parent_parallel_start_node_id": null, "iteration_id": null, "loop_id": null}}
+
+data: {"event": "workflow_finished", "workflow_run_id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "task_id": "fd543f06-67aa-4ac4-adf4-d0bd2e5fdce2", "data": {"id": "e07c50a5-4e6f-462a-9fbc-9c482f808e4d", "workflow_id": "0a1fac4a-2cf7-4fd7-aa15-dbc31e045611", "sequence_number": 7, "status": "succeeded", "outputs": {"result": "\u30c6\u30b9\u30c8\u306e\u7d50\u679c\u306f\u3044\u304b\u304c\u3067\u3057\u3087\u3046\u304b\uff1f\u4f55\u304b\u304a\u624b\u4f1d\u3044\u3067\u304d\u308b\u3053\u3068\u304c\u3042\u308c\u3070\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002"}, "error": null, "elapsed_time": 1.2249077469996337, "total_tokens": 37, "total_steps": 3, "created_by": {"id": "8b13bb02-b184-4cf6-a414-a7954ee31659", "user": "abc-123"}, "created_at": 1745715382, "finished_at": 1745715383, "exceptions_count": 0, "files": []}}
+
