@@ -17,29 +17,27 @@ export default function WorkflowBlocking() {
   const [output, setOutput] = useState("");
 
   const callDifyApi = async () => {
-    if (!input.trim()) return
+    if (!input.trim()) return;
 
-    setOutput("")
+    setOutput("");
 
     try {
       const response = await fetch("/api/workflow-block", {
         method: "POST",
         headers: {
-          "Content-Type" : "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          query: input
-        })
-      })
+          query: input,
+        }),
+      });
 
       const result = await response.json();
       setOutput(result);
-
-    } catch(error) {
+    } catch (error) {
       console.error("API接続に失敗しました", error);
-      setOutput("エラーが発生しました")
+      setOutput("エラーが発生しました");
     }
-
   };
 
   return (
