@@ -1,10 +1,15 @@
 import ChatSidebar from "@/components/ChatSidebar";
+import {auth} from "@/auth";
 
-export default function PrivateLayout({
+export default async function PrivateLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const session = await auth();
+  console.log("id付与後:", session)
+
   return (
     <div
       className="

@@ -1,28 +1,27 @@
-'use server';
- 
-import { signIn } from '@/auth';
-import { AuthError } from 'next-auth';
-import { redirect } from 'next/navigation'
- 
+"use server";
+
+import { signIn } from "@/auth";
+import { AuthError } from "next-auth";
+import { redirect } from "next/navigation";
+
 export async function authenticate(
   prevState: string | undefined,
-  formData: FormData,
+  formData: FormData
 ) {
   try {
-    await signIn('credentials', {
+    await signIn("credentials", {
       ...Object.fromEntries(formData),
-      redirect: false
-    })
+      redirect: false,
+    });
 
-    redirect('/dashboard')
+    redirect("/dashboard");
   } catch (error) {
     if (error instanceof AuthError) {
-      switch (error.type) {
-        case 'CredentialsSignin':
-          return 'メールアドレスまたはパスワードが正しくありません。';
-        default:
-          return 'エラーが発生しました。';
+      // ここで error.message を見る
+      if (error.message.includes("CredentialsSignin")) {
+        return "メールアドレスまたはパスワードが正しくありません。";
       }
+      return "エラーが発生しました。";
     }
     throw error;
   }
