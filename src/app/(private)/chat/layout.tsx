@@ -1,14 +1,13 @@
 import ChatSidebar from "@/components/ChatSidebar";
-import {auth} from "@/auth";
+import { auth } from "@/auth";
 
 export default async function PrivateLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   const session = await auth();
-  console.log("id付与後:", session)
+  const userId = session?.user?.id as string;
 
   return (
     <div
@@ -18,12 +17,14 @@ export default async function PrivateLayout({
     >
       <div
         className="
-          w-full md:w-80 order-2 md:order-1 h-20 md:h-full border-t 
+          w-full md:w-80 order-2 md:order-1 h-64 md:h-full border-t 
           md:border-r md:border-t-0 bg-slate-100 overflow-y-auto"
       >
-        <ChatSidebar />
+        <ChatSidebar userId={userId} />
       </div>
-      <div className="flex-1 p-4 order-1 md:order-2 overflow-y-auto">{children}</div>
+      <div className="flex-1 p-4 order-1 md:order-2 overflow-y-auto">
+        {children}
+      </div>
     </div>
   );
 }

@@ -59,7 +59,7 @@ export const useChatStore = create<ChatStore>()(
         set({
           conversationId: null,
           messages: [],
-          conversations: [],
+          // conversations: [],
           isLoading: false,
         }),
     }),
