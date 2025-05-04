@@ -1,17 +1,34 @@
 "use client";
 
 import ChatInput from "@/components/ChatInput";
-import type { ChatProps } from "@/types/chat";
+import type { ChatContainerProps } from "@/types/chat";
 import { useEffect, useRef } from "react";
 import { useChatStore } from "@/store/chatStore";
 
-export default function ChatContainer({ userId }: ChatProps) {
-  const { messages, isLoading } = useChatStore();
+export default function ChatContainer({
+  isNewChat,
+  userId,
+}: ChatContainerProps) {
+  const {
+    messages,
+    isLoading,
+    conversationId: storeConversationId,
+    setConversationId,
+    setMessages,
+    clearMessage,
+  } = useChatStore();
   const endOfMessagesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     endOfMessagesRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  useEffect(() => {
+    if (isNewChat) {
+      clearMessage()
+      setConversationId("")
+    }
+  }, [isNewChat, clearMessage, setConversationId])
 
   return (
     <div className="flex flex-col h-full">
