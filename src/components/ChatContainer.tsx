@@ -7,16 +7,12 @@ import { useChatStore } from "@/store/chatStore";
 
 export default function ChatContainer({
   isNewChat,
+  initialMessages,
+  conversationId,
   userId,
 }: ChatContainerProps) {
-  const {
-    messages,
-    isLoading,
-    conversationId: storeConversationId,
-    setConversationId,
-    setMessages,
-    clearMessage,
-  } = useChatStore();
+  const { messages, isLoading, setConversationId, setMessages, clearMessage } =
+    useChatStore();
   const endOfMessagesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -25,10 +21,16 @@ export default function ChatContainer({
 
   useEffect(() => {
     if (isNewChat) {
-      clearMessage()
-      setConversationId("")
+      clearMessage();
+      setConversationId("");
     }
-  }, [isNewChat, clearMessage, setConversationId])
+    if (conversationId) {
+      setConversationId(conversationId)
+    }
+    if (initialMessages && initialMessages.length > 0) {
+      setMessages(initialMessages)
+    }
+  }, [isNewChat, clearMessage, setConversationId, initialMessages, conversationId, setMessages]);
 
   return (
     <div className="flex flex-col h-full">
