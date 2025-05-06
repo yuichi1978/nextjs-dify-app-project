@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import type { ChatProps } from "@/types/chat";
 import { useChatStore } from "@/store/chatStore";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function ChatInput({ userId }: ChatProps) {
   const [input, setInput] = useState("");
@@ -38,7 +40,20 @@ export default function ChatInput({ userId }: ChatProps) {
       });
 
       const result = await response.json();
-      // console.log(result)
+
+      if (!response.ok) {
+        if (response.status === 403) {
+          toast("利用制限に達しました", {
+            description:
+              "月間の利用回数制限に達しました。プランをアップグレードしてください。",
+          });
+        } else {
+          toast("エラーが発生しました", {
+            description: "リクエストの処理中にエラーが発生しました。",
+          });
+        }
+        return;
+      }
 
       // 会話IDがセットされていなければ設定
       if (!conversationId) {
@@ -82,6 +97,7 @@ export default function ChatInput({ userId }: ChatProps) {
           </Button>
         </div>
       </form>
+      <Toaster />
     </div>
   );
 }
