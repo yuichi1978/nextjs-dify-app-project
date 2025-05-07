@@ -1,5 +1,7 @@
 import type { NextAuthConfig } from "next-auth";
 
+const PROTECTED_PATHS = ["/dashboard", "/manage", "/chat", "/subscription"]
+
 export const authConfig = {
   pages: {
     signIn: "/login",
@@ -8,11 +10,10 @@ export const authConfig = {
     authorized({ auth, request: { nextUrl } }) {
       // authはユーザーセッションが含まれる
       const isLoggedIn = !!auth?.user; // ユーザーがログインしているか
-      const isOnDashboard =
-        nextUrl.pathname.startsWith("/dashboard") ||
-        nextUrl.pathname.startsWith("/manage") ||
-        nextUrl.pathname.startsWith("/chat"); // 追加
-      if (isOnDashboard) {
+      const isProtedRoute = PROTECTED_PATHS.some(prefix => 
+        nextUrl.pathname.startsWith(prefix)
+      )
+      if (isProtedRoute) {
         if (isLoggedIn) return true;
         return Response.redirect(new URL("/login", nextUrl));
       } else if (isLoggedIn && nextUrl.pathname === "/login") {
