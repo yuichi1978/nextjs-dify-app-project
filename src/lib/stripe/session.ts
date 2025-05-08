@@ -64,3 +64,11 @@ export async function createCheckoutSession(
   });
   return checkoutSession;
 }
+
+// Stripe顧客IDを取得
+export async function getStripeCustomerId(userId: string) {
+  const customer = await prisma.stripeCustomer.findUnique({
+    where: { userId },
+  });
+  return customer?.stripeCustomerId;
+}

@@ -43,7 +43,7 @@ export default async function UserUsage({ userId }: ChatProps) {
           </div>
         </div>
 
-        {plan === "FREE" && (
+        {plan === "FREE" ? (
           <div className="mt-4 pt-4 border-t">
             <p className="text-sm text-gray-600 mb-2">
               {usage >= limit
@@ -54,13 +54,23 @@ export default async function UserUsage({ userId }: ChatProps) {
               <Button className="w-full">Proプランにアップグレード</Button>
             </Link>
           </div>
+        ) : (
+          // プロプラン用の表示
+          <div className="mt-4 pt-4 border-t">
+            <Link href="/subscription">
+              <Button className="w-full">プラン内容の確認</Button>
+            </Link>
+          </div>
         )}
 
-        <div className="mt-4 pt-4">
+        <div className="mt-4 flex justify-between">
           <Link href="/chat">
-            <div className="my-4 text-sm text-indigo-700">
+            <div className="text-sm text-indigo-700">
               チャット画面に移動する
             </div>
+          </Link>
+          <Link href="/subscription">
+            <div className="text-sm text-indigo-700">プラン詳細を見る</div>
           </Link>
         </div>
       </CardContent>
